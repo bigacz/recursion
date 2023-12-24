@@ -15,7 +15,13 @@ function fibs(number) {
 }
 
 function fibsRec(number) {
-  if (number === 2) {
+  if (number <= 0) {
+    return [];
+  }
+  if (number == 1) {
+    return [0];
+  }
+  if (number == 2) {
     return [0, 1];
   }
 
@@ -31,5 +37,5 @@ function fibsRec(number) {
 
 const testValue = 8;
 
-console.log(fibs(testValue));
-console.log(fibsRec(testValue));
+console.log(fibs(testValue)); // [0, 1, 1, 2, 3, 5, 8, 13]
+console.log(fibsRec(testValue)); // [0, 1, 1, 2, 3, 5, 8, 13]
